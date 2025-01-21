@@ -126,7 +126,7 @@ This section is for adding fluid effect to the material.
 - C_FluidMask
 	- Texture
  	- A mask texture for separately manipulating various parts of fluid.
-  	- It accepts an RGBA image in which the parts with one of 7 colors will affect the fluid they overlapped with.
+  	- It accepts an RGBA image on which the parts with one of 7 colors will affect the fluid they overlapped with.
 - C900_FluidMaskStrength
 	- Float
  	- Total intensity of C_FluidMask to affect fluid.
@@ -188,50 +188,41 @@ The following properties are similar to those from C901_FluidMaskStrength_Red to
 - C969_FluidScaleY_White
 
 ### Color Mask
-This section is for replacing the colors brought by A1_Color and MainTex with new colors designated by a mask texture.
+This section is for changing the original colors brought by A1_Color and MainTex with new colors designated by a mask texture.
 - D_ColorMask
-	- 
+	- Texture
+ 	- Mask texture for separately changing the original colors. It accepts an RGBA image on which the parts with one of 7 colors will affect the 
+original colors they overlapped with.
 - D101_ColorMaskStrength
-	- 
+	- Float
+ 	- Intensity of the mask to change the original colors. If it's 1.0, the original colors are completely replaced by the new colors. If less than 1.0, the original colors are blended with the new colors. If 0, the original colors are kept without any change.
 - D911_ColorMaskToColor_Red
-	- 
+	- Color
+ 	- If the pixels overlapped with the Red parts on the color mask, these pixels' original colors can be affected by a new color designated by this property.
 - D912_ColorMaskStr_Red
-	- 
+	- Float
+ 	- Intensity of the Red parts on the color mask to affect the original colors of the pixels overlapped with these parts.
 - D913_ColorMaskEmit_Red
-	- 
+	- Float
+ 	- Intensity of light emitted by the pixels overlapped with the Red parts on the color mask.
+  	- The color of this emission is same as D911_ColorMaskToColor_Red.
+ 
+The following properties are similar to those from D911_ColorMaskToColor_Red to D913_ColorMaskEmit_Red:
 - D921_ColorMaskToColor_Green
-	- 
 - D922_ColorMaskStr_Green
-	- 
 - D923_ColorMaskEmit_Green
-	- 
 - D931_ColorMaskToColor_Blue
-	- 
 - D932_ColorMaskStr_Blue
-	- 
 - D933_ColorMaskEmit_Blue
-	- 
 - D941_ColorMaskToColor_Cyan
-	- 
 - D942_ColorMaskStr_Cyan
-	- 
 - D943_ColorMaskEmit_Cyan
-	- 
 - D951_ColorMaskToColor_Fuchsia
-	- 
 - D952_ColorMaskStr_Fuchsia
-	- 
 - D953_ColorMaskEmit_Fuchsia
-	- 
 - D961_ColorMaskToColor_Yellow
-	- 
 - D962_ColorMaskStr_Yellow
-	- 
 - D963_ColorMaskEmit_Yellow
-	- 
 - D971_ColorMaskToColor_White
-	- 
 - D972_ColorMaskStr_White
-	- 
 - D973_ColorMaskEmit_White
-	- 
