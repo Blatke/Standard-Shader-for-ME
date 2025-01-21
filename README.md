@@ -63,7 +63,7 @@ The properties of this shader shown on the MaterialEditor tab are listed below. 
  	- Intensity of the bump effect brought by Detail Normal 2 map.
 - A_BumpEraserMask
 	- Texture
- 	- A mask texture for erasing the bump effects brought by the normal maps above.
+ 	- A mask texture for erasing or removing the bump effects brought by the normal maps above.
   	- It accepts an RGBA image in which the values in RGBA channels greater than 0 will erase the corresponding bump pixels.
 - A920_BumpEraserThreshold
 	- Float
@@ -80,15 +80,20 @@ The properties of this shader shown on the MaterialEditor tab are listed below. 
 
 ### Wetness
 - B_WetnessMap
-	- 
+	- Texture
+ 	- A given texture providing for wet effect with extra smoothness and metallic that will added to A6_Smoothness and A7_Metallic.
 - B1_WetnessDensity
-	- 
+	- Float
+ 	- Scale of B_WetnessMap texture. Greater density means a smaller scale of the texture.
 - B2_WetnessStrength
-	- 
+	- Float
+ 	- Intensity of smoothness and metallic of wetness.
 - B_WetnessBumpMap
-	- 
+	- Texture
+ 	- A given texture providing with bump effect for wetness.
 - B3_WetnessBump
-	- 
+	- Float
+ 	- Intensity of the bump effect brought by B_WetnessBumpMap texture.
 
 ### Fluid
 - C_FluidMap
