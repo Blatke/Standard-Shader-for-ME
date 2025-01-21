@@ -11,17 +11,18 @@ The properties of this shader shown on the MaterialEditor tab are listed below. 
 - MainTex
 	- Texture
    - Main Texture that accepts an RGBA image.
+   - If a pixel on MainTex has a value in alpha channel less than 1.0, it might be further processed by the following properties.
 - A2_Cutout
 	- Float
-   - Threshold for culling the alpha values (transparent or semi-transparent patterns) of MainTex.
+   - Threshold for culling the pixels on MainTex if their alpha channel values are less than 1.0.
 - A2_AlphaColor
 	- Color
-   - If the image for MainTex has the alpha values less than 1.0 and greater than the threshold for culling (A2_Cutout), the patterns covered by these values will have their colors blended by this A2_AlphaColor.
+   - If the image for MainTex has the alpha channel values less than 1.0 and greater than the threshold for culling (A2_Cutout), the pixels covered by these values will have their colors blended by this A2_AlphaColor.
    - This functions only if A2_AlphaColor's alpha value is less than 1.0, otherwise no color will be blended under this function.
 - A_OMS
 	- Texture
   - An OMS texture for assginning respectively Occlusion, Metallic and Smoothness to the Red, Green and Blue channel values in the imported RGBA image.
-  - If the image has alpha value less than 1.0, this value will multiply respectively by the RGB values in the image.
+  - If the image has an alpha value less than 1.0, this value will multiply respectively by the RGB values in the image.
 - A5_Occlusion
 	- Float
   - Occlusion value that multiplies by the Red channel values of A_OMS texture.
@@ -43,27 +44,39 @@ The properties of this shader shown on the MaterialEditor tab are listed below. 
 
 ### Bump and Eraser
 - Normal
-	- 
+	- Texture
+ 	- Normal map for bump effect.
 - A901_NormalStrength
-	- 
+	- Float
+ 	- Intensity of the bump effect brought by Normal map.
 - DetailNormal
-	- 
+	- Texture
+ 	- Detail Normal 1 map that blends with Normal map.
 - A902_DetailNormal1Strength
-	- 
+	- Float
+ 	- Intensity of the bump effect brought by Detail Normal 1 map.
 - DetailNormal2
-	- 
+	- Texture
+ 	- Another Detail Normal map that blends with Normal and Detail Normal 1 maps.
 - A903_DetailNormal2Strength
-	- 
+	- Float
+ 	- Intensity of the bump effect brought by Detail Normal 2 map.
 - A_BumpEraserMask
-	- 
+	- Texture
+ 	- A mask texture for erasing the bump effects brought by the normal maps above.
+  	- It accepts an RGBA image in which the values in RGBA channels greater than 0 will erase the corresponding bump pixels.
 - A920_BumpEraserThreshold
-	- 
+	- Float
+ 	- Intensity of bump erasing.
 - _A931_BumpEraserNormal
-	- 
+	- Float
+ 	- If it is 1.0, bump erasing will affect Normal map. Otherwise, it will not affect Normal map.
 - _A941_BumpEraserDetailNormal1
-	- 
+	- Float
+ 	- If it is 1.0, bump erasing will affect Detail Normal 1 map. Otherwise, it will not affect Detail Normal 1 map.
 - _A951_BumpEraserDetailNormal2
-	- 
+	- Float
+ 	- If it is 1.0, bump erasing will affect Detail Normal 2 map. Otherwise, it will not affect Detail Normal 2 map.
 
 ### Wetness
 - B_WetnessMap
