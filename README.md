@@ -1,2 +1,232 @@
 # Standard Shader for ME
 A shader mod for HS2 / AIS based on [**Blatke/Standard.shader**](https://github.com/Blatke/Standard.shader).
+
+## Properties
+The properties of this shader shown on the MaterialEditor tab are listed below. Most of them have a prefix like "A1_", "B1_", "C1" or "D101" that is for sequencing on the tab.
+
+### Main
+- A1_Color
+	- Color
+   - Tint color that will blend with MainTex.
+- MainTex
+	- Texture
+   - Main Texture that accepts an RGBA image.
+- A2_Cutout
+	- Float
+   - Threshold for culling the alpha values (transparent or semi-transparent patterns) of MainTex.
+- A2_AlphaColor
+	- Color
+   - If the image for MainTex has the alpha values less than 1.0 and greater than the threshold for culling (A2_Cutout), the patterns covered by these values will have their colors blended by this A2_AlphaColor.
+   - This functions only if A2_AlphaColor's alpha value is less than 1.0, otherwise no color will be blended under this function.
+- A_OMS
+	- Texture
+  - An OMS texture for assginning respectively Occlusion, Metallic and Smoothness to the Red, Green and Blue channel values in the imported RGBA image.
+  - If the image has alpha value less than 1.0, this value will multiply respectively by the RGB values in the image.
+- A5_Occlusion
+	- Float
+  - Occlusion value that multiplies by the Red channel values of A_OMS texture.
+- A7_Metallic
+	- Float
+   - Metallic value that multiplies by the Green channel values of A_OMS texuture.
+- A6_Smoothness
+	- Float
+   - Smoothness value that multiplies by the Blue channel values of A_OMS texuture.
+- A_Emission
+	- Texture
+   - Texture for light emission and accepts an RGBA image.
+- A8_EmissionColor
+	- Color
+   - Emission color that blends with the one assigned by A_Emission texture.
+- A8_EmissionStrength
+	- Float
+   - Intensity of emission.
+
+### Bump and Eraser
+- Normal
+	- 
+- A901_NormalStrength
+	- 
+- DetailNormal
+	- 
+- A902_DetailNormal1Strength
+	- 
+- DetailNormal2
+	- 
+- A903_DetailNormal2Strength
+	- 
+- A_BumpEraserMask
+	- 
+- A920_BumpEraserThreshold
+	- 
+- _A931_BumpEraserNormal
+	- 
+- _A941_BumpEraserDetailNormal1
+	- 
+- _A951_BumpEraserDetailNormal2
+	- 
+
+### Wetness
+- B_WetnessMap
+	- 
+- B1_WetnessDensity
+	- 
+- B2_WetnessStrength
+	- 
+- B_WetnessBumpMap
+	- 
+- B3_WetnessBump
+	- 
+
+### Fluid
+- C_FluidMap
+	- 
+- C_FluidNormal
+	- 
+- C1_FluidColor
+	- 
+- C2_FluidDensity
+	- 
+- C3_FluidStrength
+	- 
+- C4_FluidEmission
+	- 
+- C5_FluidBump
+	- 
+- C6_FluidRotation
+	- 
+- C_FluidMask
+	- 
+- C900_FluidMaskStrength
+	- 
+- C901_FluidMaskStrength_Red
+	- 
+- C905_FluidRotation_Red
+	- 
+- C906_FluidPositionX_Red
+	- 
+- C907_FluidPositionY_Red
+	- 
+- C908_FluidScaleX_Red
+	- 
+- C909_FluidScaleY_Red
+	- 
+- C911_FluidMaskStrength_Green
+	- 
+- C915_FluidRotation_Green
+	- 
+- C916_FluidPositionX_Green
+	- 
+- C917_FluidPositionY_Green
+	- 
+- C918_FluidScaleX_Green
+	- 
+- C919_FluidScaleY_Green
+	- 
+- C921_FluidMaskStrength_Blue
+	- 
+- C925_FluidRotation_Blue
+	- 
+- C926_FluidPositionX_Blue
+	- 
+- C927_FluidPositionY_Blue
+	- 
+- C928_FluidScaleX_Blue
+	- 
+- C929_FluidScaleY_Blue
+	- 
+- C931_FluidMaskStrength_Cyan
+	- 
+- C935_FluidRotation_Cyan
+	- 
+- C936_FluidPositionX_Cyan
+	- 
+- C937_FluidPositionY_Cyan
+	- 
+- C938_FluidScaleX_Cyan
+	- 
+- C939_FluidScaleY_Cyan
+	- 
+- C941_FluidMaskStrength_Fuchsia
+	- 
+- C945_FluidRotation_Fuchsia
+	- 
+- C946_FluidPositionX_Fuchsia
+	- 
+- C947_FluidPositionY_Fuchsia
+	- 
+- C948_FluidScaleX_Fuchsia
+	- 
+- C949_FluidScaleY_Fuchsia
+	- 
+- C951_FluidMaskStrength_Yellow
+	- 
+- C955_FluidRotation_Yellow
+	- 
+- C956_FluidPositionX_Yellow
+	- 
+- C957_FluidPositionY_Yellow
+	- 
+- C958_FluidScaleX_Yellow
+	- 
+- C959_FluidScaleY_Yellow
+	- 
+- C961_FluidMaskStrength_White
+	- 
+- C965_FluidRotation_White
+	- 
+- C966_FluidPositionX_White
+	- 
+- C967_FluidPositionY_White
+	- 
+- C968_FluidScaleX_White
+	- 
+- C969_FluidScaleY_White
+  - 
+
+### Color Mask
+- D_ColorMask
+	- 
+- D101_ColorMaskStrength
+	- 
+- D911_ColorMaskToColor_Red
+	- 
+- D912_ColorMaskStr_Red
+	- 
+- D913_ColorMaskEmit_Red
+	- 
+- D921_ColorMaskToColor_Green
+	- 
+- D922_ColorMaskStr_Green
+	- 
+- D923_ColorMaskEmit_Green
+	- 
+- D931_ColorMaskToColor_Blue
+	- 
+- D932_ColorMaskStr_Blue
+	- 
+- D933_ColorMaskEmit_Blue
+	- 
+- D941_ColorMaskToColor_Cyan
+	- 
+- D942_ColorMaskStr_Cyan
+	- 
+- D943_ColorMaskEmit_Cyan
+	- 
+- D951_ColorMaskToColor_Fuchsia
+	- 
+- D952_ColorMaskStr_Fuchsia
+	- 
+- D953_ColorMaskEmit_Fuchsia
+	- 
+- D961_ColorMaskToColor_Yellow
+	- 
+- D962_ColorMaskStr_Yellow
+	- 
+- D963_ColorMaskEmit_Yellow
+	- 
+- D971_ColorMaskToColor_White
+	- 
+- D972_ColorMaskStr_White
+	- 
+- D973_ColorMaskEmit_White
+	- 
