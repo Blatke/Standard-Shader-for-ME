@@ -1,5 +1,5 @@
 # Standard Shader for ME
-A shader mod for HS2 / AIS based on [**Blatke/Standard.shader**](https://github.com/Blatke/Standard.shader).
+A shader mod for HS2 / AIS based on [**Blake/Standard.shader**](https://github.com/Blatke/Standard.shader).
 
 ## Properties
 The properties of this shader shown on the MaterialEditor tab are listed below. Most of them have a prefix like "A1_", "B1_", "C1" or "D101" that is for sequencing on the tab.
