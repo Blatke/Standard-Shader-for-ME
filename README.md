@@ -43,6 +43,7 @@ The properties of this shader shown on the MaterialEditor tab are listed below. 
    - Intensity of emission.
 
 ### Bump and Eraser
+This section is for making the material bump or removing the bumps.
 - Normal
 	- Texture
  	- Normal map for bump effect.
@@ -79,12 +80,13 @@ The properties of this shader shown on the MaterialEditor tab are listed below. 
  	- If it is 1.0, bump erasing will affect Detail Normal 2 map. Otherwise, it will not affect Detail Normal 2 map.
 
 ### Wetness
+This section is for adding the material with wet effect.
 - B_WetnessMap
 	- Texture
  	- A given texture providing for wet effect with extra smoothness and metallic that will added to A6_Smoothness and A7_Metallic.
 - B1_WetnessDensity
 	- Float
- 	- Scale of B_WetnessMap texture. Greater density means a smaller scale of the texture.
+ 	- Scale of B_WetnessMap texture (and B3_WetnessBump). Greater density means a smaller scale of the texture.
 - B2_WetnessStrength
 	- Float
  	- Intensity of smoothness and metallic of wetness.
@@ -96,112 +98,97 @@ The properties of this shader shown on the MaterialEditor tab are listed below. 
  	- Intensity of the bump effect brought by B_WetnessBumpMap texture.
 
 ### Fluid
+This section is for adding fluid effect to the material.
 - C_FluidMap
-	- 
+	- Texture
+ 	- A given texture providing the material with smoothness for simulating fluid effect.
 - C_FluidNormal
-	- 
+	- Texture
+ 	- A given texture providing the fluid with bump.
 - C1_FluidColor
-	- 
+	- Color
+   	- Color of fluid that blends with the colors brought by _A1_Color and MainTex as well as other diffuse colors.
 - C2_FluidDensity
-	- 
+	- Float
+ 	- Scale of C_FluidMap texture (and C5_FluidBump). Greater density means a smaller scale.
 - C3_FluidStrength
-	- 
+	- Float
+ 	- Intensity of fluid performance in smoothness and tint.
 - C4_FluidEmission
-	- 
+	- Color
+ 	- Color of the light that fluid emits.
 - C5_FluidBump
-	- 
+	- Float
+ 	- Intensity of the bump brought by C_FluidNormal texture.
 - C6_FluidRotation
-	- 
+	- Float
+ 	- Degree of the rotation of C_FluidMap and C_FluidNormal textures.
 - C_FluidMask
-	- 
+	- Texture
+ 	- A mask texture for separately manipulating various parts of fluid.
+  	- It accepts an RGBA image in which the parts with one of 7 colors will affect the fluid they overlapped with.
 - C900_FluidMaskStrength
-	- 
+	- Float
+ 	- Total intensity of C_FluidMask to affect fluid.
 - C901_FluidMaskStrength_Red
-	- 
+	- Float
+ 	- Intensity of the red parts on C_FluidMask to affect fluid.
 - C905_FluidRotation_Red
-	- 
+	- Float
+ 	- Degree of the rotation of fluid overlapped with the red parts on C_FluidMask
 - C906_FluidPositionX_Red
-	- 
+	- Float
+ 	- Offset on X axis of fluid overlapped with the red parts on C_FluidMask.
 - C907_FluidPositionY_Red
-	- 
+	- Float
+ 	- Offset on Y axis of fluid overlapped with the red parts on C_FluidMask.
 - C908_FluidScaleX_Red
-	- 
+	- Float
+ 	- Scale on X axis of fluid overlapped with the red parts on C_FluidMask.
 - C909_FluidScaleY_Red
-	- 
+	- Float
+ 	- Scale on Y axis of fluid overlapped with the red parts on C_FluidMask.
+
+The following properties are similar to those from C901_FluidMaskStrength_Red to C909_FluidScaleY_Red:
 - C911_FluidMaskStrength_Green
-	- 
 - C915_FluidRotation_Green
-	- 
 - C916_FluidPositionX_Green
-	- 
 - C917_FluidPositionY_Green
-	- 
 - C918_FluidScaleX_Green
-	- 
 - C919_FluidScaleY_Green
-	- 
 - C921_FluidMaskStrength_Blue
-	- 
 - C925_FluidRotation_Blue
-	- 
 - C926_FluidPositionX_Blue
-	- 
 - C927_FluidPositionY_Blue
-	- 
 - C928_FluidScaleX_Blue
-	- 
 - C929_FluidScaleY_Blue
-	- 
 - C931_FluidMaskStrength_Cyan
-	- 
 - C935_FluidRotation_Cyan
-	- 
 - C936_FluidPositionX_Cyan
-	- 
 - C937_FluidPositionY_Cyan
-	- 
 - C938_FluidScaleX_Cyan
-	- 
 - C939_FluidScaleY_Cyan
-	- 
 - C941_FluidMaskStrength_Fuchsia
-	- 
 - C945_FluidRotation_Fuchsia
-	- 
 - C946_FluidPositionX_Fuchsia
-	- 
 - C947_FluidPositionY_Fuchsia
-	- 
 - C948_FluidScaleX_Fuchsia
-	- 
 - C949_FluidScaleY_Fuchsia
-	- 
 - C951_FluidMaskStrength_Yellow
-	- 
 - C955_FluidRotation_Yellow
-	- 
 - C956_FluidPositionX_Yellow
-	- 
 - C957_FluidPositionY_Yellow
-	- 
 - C958_FluidScaleX_Yellow
-	- 
 - C959_FluidScaleY_Yellow
-	- 
 - C961_FluidMaskStrength_White
-	- 
 - C965_FluidRotation_White
-	- 
 - C966_FluidPositionX_White
-	- 
 - C967_FluidPositionY_White
-	- 
 - C968_FluidScaleX_White
-	- 
 - C969_FluidScaleY_White
-  - 
 
 ### Color Mask
+This section is for replacing the colors brought by A1_Color and MainTex with new colors designated by a mask texture.
 - D_ColorMask
 	- 
 - D101_ColorMaskStrength
