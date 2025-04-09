@@ -29,4 +29,10 @@ When importing a custom bump map into this shader (or other shaders) on Material
 
 This could actually happen because the games based on Unity Engine are compressed their bump maps in DXT5nm compression format, in which red channel is swapped with alpha channel that makes a bump map look pink and semi-transparent instead of blue or purple. This means, if you directly import a purple bump map into MaterialEditor in HS2/AIS Studio, the map might not be correctly read, because its alpha channel that is read as red channel in DXT5nm format is always 1.0.
 
-To avoid this problem, it suggests to directly import the pink bump maps that are in DXT5nm format. You can choose [NormalMapTool](https://www.patreon.com/posts/99107961) to do a quick conversion.
+To avoid this problem, it suggests to directly import the pink bump maps that are **in DXT5nm format**. You can choose [NormalMapTool](https://www.patreon.com/posts/99107961) to do a quick conversion.
+
+### Weird seams appear when using a mask
+If importing a compressed image for a mask, suck as in .jpeg or .jpg format, weird seams might appear on the edge mapped by the mask. It suggests to use uncompressed image like **.png** for a mask.
+
+### What are the 7 colors a mask supports?
+![image](https://github.com/user-attachments/assets/78c92cbc-5b3a-4390-a878-e62a7fa99413)
