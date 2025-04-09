@@ -1,5 +1,5 @@
 # Standard Shader for ME
-A shader mod for HS2 / AI-Shoujo Studio MaterialEditor based on [**Blake/Standard.shader**](https://github.com/Blatke/Standard.shader).
+A experimental shader mod for HS2 / AI-Shoujo Studio MaterialEditor based on [**Blake/Standard.shader**](https://github.com/Blatke/Standard.shader).
 
 ## Main Features
 1. **Bump Manipulation**: It provides properties to make the material bump by importing bump maps or remove the bumps via mapping by a mask.
