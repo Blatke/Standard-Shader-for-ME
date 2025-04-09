@@ -15,7 +15,7 @@ An experimental shader mod for HS2 / AI-Shoujo Studio MaterialEditor based on [*
 ## Tutorial
 For users on MEGA: https://mega.nz/folder/93QExRKD#VbqWFROqjYvKHejaiVHAAw
 
-The textures invovlved in the tutorial are also put into a folder there.
+The textures involved in the tutorial are also put into a folder there.
 
 > [!TIP]
 >
