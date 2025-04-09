@@ -1,5 +1,5 @@
 # Standard Shader for ME
-A shader mod for HS2 / AIS Studio MaterialEditor based on [**Blake/Standard.shader**](https://github.com/Blatke/Standard.shader).
+A shader mod for HS2 / AI-Shoujo Studio MaterialEditor based on [**Blake/Standard.shader**](https://github.com/Blatke/Standard.shader).
 
 ## Main Features
 1. **Bump Manipulation**: It provides properties to make the material bump or remove the bumps, allowing for detailed texture adjustments.
@@ -23,4 +23,6 @@ For users on Pixiv: https://www.pixiv.net/artworks/129073962
 ### Newly imported bump maps look weird in shadow
 When importing a custom bump map into this shader (or other shaders) on MaterialEditor, the bumps with shadows might look weird.
 
-This could actually happen because the games based on Unity Engine are compressed their bump maps in a DXT5nm compression format, in which red channel is swapped with alpha channel that makes a bump map look pink and semi-transparent instead of blue or purple.
+This could actually happen because the games based on Unity Engine are compressed their bump maps in DXT5nm compression format, in which red channel is swapped with alpha channel that makes a bump map look pink and semi-transparent instead of blue or purple. This means, if you directly import a purple bump map into MaterialEditor in HS2/AIS Studio, the map might not be correctly read, because its alpha channel that is read as red channel in DXT5nm format is always 1.0.
+
+To avoid this problem, it suggests to directly import the pink bump maps that are in DXT5nm format. You can choose [NormalMapTool](https://www.patreon.com/posts/99107961) to do a quick conversion.
