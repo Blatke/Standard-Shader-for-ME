@@ -19,6 +19,12 @@ For users on MEGA: https://mega.nz/folder/93QExRKD#VbqWFROqjYvKHejaiVHAAw
 
 For users on Pixiv: https://www.pixiv.net/artworks/129073962
 
+> [!TIP]
+>
+> The tutorial was based on **Version 2.7.2** of this mod.
+>
+> It took a tight clothing worn on a character to demonstrate the using of this shader mod. In this tight clothing mod, the UV layout is quite similar to that of HS2 character's body, and this makes the textures referred in this tutorial quite similar to the overlay maps putting on character's body.
+
 ## Troubleshooting
 ### Newly imported bump maps look weird in shadow
 When importing a custom bump map into this shader (or other shaders) on MaterialEditor, the bumps with shadows might look weird.
