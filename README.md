@@ -21,7 +21,7 @@ For users on Pixiv: https://www.pixiv.net/artworks/129073962
 >
 > The tutorial was based on **Version 2.7.2** of this mod.
 >
-> It took a tight clothing worn on a character to demonstrate the using of this shader mod. In this tight clothing mod, the UV layout is quite similar to that of HS2 character's body, and this makes the textures referred in this tutorial quite similar to the overlay maps putting on character's body.
+> It took a tight clothing worn on a character to demonstrate the using of this shader mod. In this tight clothing mod, the UV layout is quite similar to that of HS2 character's body, and this makes the textures referred in this tutorial quite similar to the overlay maps putting on character's body. This clothing mod involved in this tutorial can be found on: https://github.com/Blatke/Heels-with-Tight---HS2-AIS-mod.
 
 ## Troubleshooting
 ### Newly imported bump maps look weird in shadow
