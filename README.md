@@ -27,7 +27,7 @@ The textures involved in the tutorial are also put into a folder there.
 ### Newly imported bump maps look weird in shadow
 When importing a custom bump map into this shader (or other shaders) on MaterialEditor, the bumps with shadows might look weird.
 
-This could actually happen because the games based on Unity Engine are compressed their bump maps in DXT5nm compression format, in which red channel is swapped with alpha channel that makes a bump map look pink and semi-transparent instead of blue or purple. This means, if you directly import a purple bump map into MaterialEditor in HS2/AIS Studio, the map might not be correctly read, because its alpha channel that is read as red channel in DXT5nm format is always 1.0.
+This could actually happen because the games based on Unity Engine are compressed their bump maps in [DXT5nm compression format](http://wiki.polycount.com/wiki/Normal_Map_Compression#DXT5nm_Compression), in which red channel is swapped with alpha channel that makes a bump map look pink and semi-transparent instead of blue or purple. This means, if you directly import a purple bump map into MaterialEditor in HS2/AIS Studio, the map might not be correctly read, because its alpha channel that is read as red channel in DXT5nm format is always 1.0.
 
 To avoid this problem, it suggests to directly import the pink bump maps that are **in DXT5nm format**. You can choose [NormalMapTool](https://www.patreon.com/posts/99107961) to do a quick conversion.
 
