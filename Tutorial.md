@@ -1,4 +1,4 @@
-<img src="https://github.com/Blatke/Standard-Shader-for-ME/blob/main/Tutorial/img/00-00-01.jpg" height="15%" />
+<img src="https://github.com/Blatke/Standard-Shader-for-ME/blob/main/Tutorial/img/00-00-01.jpg" height="5%" />
 
 <img src="https://github.com/Blatke/Standard-Shader-for-ME/blob/main/Tutorial/img/00-00-02.jpg" height="15%" />
 
