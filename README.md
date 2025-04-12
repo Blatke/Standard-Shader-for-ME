@@ -13,14 +13,16 @@ An experimental shader mod for HS2 / AI-Shoujo Studio MaterialEditor based on [*
 3. Start HS2/AIS Studio, select an object and go to the MaterialEditor tab, and then load Blake/Standard as a new shader to the material of the object.
 
 ## Tutorial
-For users on MEGA: https://mega.nz/folder/93QExRKD#VbqWFROqjYvKHejaiVHAAw
 
-The textures involved in the tutorial are also put into a folder there.
+Please check this [**Tutorial**](https://github.com/Blatke/Standard-Shader-for-ME/blob/main/Tutorial/0.Tutorial.md) for the usage of this shader mod.
+
 
 > [!TIP]
 >
 > The tutorial was based on **Version 2.7.2** of this mod.
 >
+> The textures involved in the tutorial can be checked on: https://github.com/Blatke/Standard-Shader-for-ME/tree/main/Tutorial/Textures%20involved%20in%20Tutorial.
+> 
 > It took a tight clothing worn on a character to demonstrate the using of this shader mod. In this tight clothing mod, the UV layout is quite similar to that of HS2 character's body, and this makes the textures referred in this tutorial quite similar to the overlay maps putting on character's body. This clothing mod involved in this tutorial can be found on: https://github.com/Blatke/Heels-with-Tight---HS2-AIS-mod.
 
 ## Troubleshooting
