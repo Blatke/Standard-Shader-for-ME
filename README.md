@@ -26,6 +26,7 @@ Please check this [**Tutorial**](https://github.com/Blatke/Standard-Shader-for-M
 > It took a tight clothing worn on a character to demonstrate the using of this shader mod. In this tight clothing mod, the UV layout is quite similar to that of HS2 character's body, and this makes the textures referred in this tutorial quite similar to the overlay maps putting on character's body. This clothing mod involved in this tutorial can be found on: https://github.com/Blatke/Heels-with-Tight---HS2-AIS-mod.
 
 ## Troubleshooting
+The following content is about the issues that could be mostly asked. For any further problem, please leave a message on my [Discord](https://discord.gg/nc5pmnf8X3) server if there is any chance.
 ### Newly imported bump maps look weird in shadow
 When importing a custom bump map into this shader (or other shaders) on MaterialEditor, the bumps with shadows might look weird.
 
