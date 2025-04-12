@@ -39,3 +39,6 @@ If importing a compressed image for a mask, suck as in .jpeg or .jpg format, wei
 
 ### What are the 7 colors a mask supports?
 ![image](https://github.com/user-attachments/assets/78c92cbc-5b3a-4390-a878-e62a7fa99413)
+
+### Why the properties have prefixes in names?
+The properties mostly have the names like **D913**_ColorMaskEmit_Red. The prefix "D913" has no special meaning. These prefixes are just for sequencing the properties on MaterialEditor tab, which sequences the properties by alphabetic order of their names. By using these prefixes, the properties in the same section can be listed together instead of being separately distributed that could be difficult to find.
