@@ -10,7 +10,7 @@ An experimental shader mod for HS2 / AI-Shoujo Studio MaterialEditor based on [*
 ## Installation
 1. Download the .zipmod file for the latest version on the [Release](https://github.com/Blatke/Standard-Shader-for-ME/releases) page.
 2. Drag and drop it into the **/mods/** folder of your game directory.
-3. Start HS2/AIS Studio, select an object and go to the MaterialEditor tab, and then load Blake/Standard as a new shader to the material of the object.
+3. Start HS2/AIS Studio, select an object and go to the MaterialEditor tab, and then load **Blake/Standard** as a new shader to the material of the object.
 
 ## Tutorial
 
